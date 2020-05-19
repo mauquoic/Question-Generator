@@ -11,9 +11,10 @@ function App() {
   const [potentialQuestions, setPotentialQuestions] = useState<Array<Question>>(getQuestions);
   const [open, setOpen] = useState(false);
   const classes = useStyles();
+  const title = "Bienvenue à l'examen de droit et progrès médical!";
 
   const addQuestion = () => {
-    if (potentialQuestions.length > 0) {
+    if (questions.length < 2) {
       let index = Math.floor(Math.random() * potentialQuestions.length);
       let chosenQuestion = potentialQuestions[index];
       setQuestions([chosenQuestion, ...questions]);
@@ -33,14 +34,14 @@ function App() {
         <Grid container className={classes.root}>
           <Grid container spacing={1} item xs={12} justify="center">
             <Grid item xs={9} className={classes.title}>
-              <h1>Bienvenue à l'examen de droit et progrès médical!</h1>
+              <h1>{title}</h1>
             </Grid>
           </Grid>
           {questions && questions.length > 0 ?
               <Grid container>
                 {questions.map((question) =>
                     <Grid container item xs={12} direction="row" key={question.id} className={classes.row}>
-                      <Grid item xs={12} alignItems="flex-end" >
+                      <Grid item xs={12} alignItems="flex-end">
                         {question.id}
                         {question.question}
                       </Grid>
@@ -51,7 +52,7 @@ function App() {
           }
           <Grid container item xs={12} justify="center">
             <Grid item xs={12} className={classes.row}>
-              <Button  color="primary" variant="contained" onClick={addQuestion}>
+              <Button color="primary" variant="contained" onClick={addQuestion}>
                 Générer une question au hasard
               </Button>
             </Grid>
@@ -69,7 +70,7 @@ function App() {
             onClose={() => setOpen(false)}
         >
           <MuiAlert variant="filled" severity="error" onClose={() => setOpen(false)}>
-            Toutes les questions ont déjà été choisies!
+            Vous êtes au maximum des questions!
           </MuiAlert>
         </Snackbar>
       </div>
@@ -94,6 +95,42 @@ const getQuestions: () => Array<Question> = () => {
     },
     {
       id: 3,
+      question: "Question 3?"
+    },
+    {
+      id: 4,
+      question: "Question 3?"
+    },
+    {
+      id: 5,
+      question: "Question 3?"
+    },
+    {
+      id: 6,
+      question: "Question 3?"
+    },
+    {
+      id: 7,
+      question: "Question 3?"
+    },
+    {
+      id: 8,
+      question: "Question 3?"
+    },
+    {
+      id: 9,
+      question: "Question 3?"
+    },
+    {
+      id: 10,
+      question: "Question 3?"
+    },
+    {
+      id: 11,
+      question: "Question 3?"
+    },
+    {
+      id: 12,
       question: "Question 3?"
     }
   ]
