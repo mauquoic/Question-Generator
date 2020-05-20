@@ -38,9 +38,9 @@ function App() {
             </Grid>
           </Grid>
           {questions && questions.length > 0 ?
-              <Grid container>
+              <Grid container justify="center">
                 {questions.map((question) =>
-                    <Grid container item xs={12} direction="row" key={question.id} className={classes.row}>
+                    <Grid container item xs={8} direction="row" key={question.id} className={classes.row}>
                       <Grid item xs={12} alignItems="flex-end">
                         {question.id}. {question.question}
                       </Grid>
