@@ -9,7 +9,7 @@ export const useStyles = makeStyles((theme: Theme) =>
         paddingBottom: theme.spacing(3)
       },
       row: {
-        paddingBottom: theme.spacing(1)
+        paddingBottom: theme.spacing(4)
       },
     }),
 );
