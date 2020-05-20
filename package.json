@@ -18,7 +18,7 @@
     "typescript": "^3.7.5"
   },
   "scripts": {
-    "start": "serve -s build",
+    "start": "react-scripts start",
     "prestart": "npm install -g serve",
     "local": "react-scripts start",
     "build": "react-scripts build",
