@@ -41,7 +41,7 @@ function App() {
               <Grid container justify="center">
                 {questions.map((question) =>
                     <Grid container item xs={8} direction="row" key={question.id} className={classes.row}>
-                      <Grid item xs={12} alignItems="flex-end" style={{fontSize: 28}}>
+                      <Grid item xs={12} alignItems="flex-end" style={{fontSize: 20}}>
                         {question.id}. {question.question}
                       </Grid>
                     </Grid>
