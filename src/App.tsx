@@ -14,7 +14,7 @@ function App() {
   const title = "Bienvenue à l'examen de droit et progrès médical!";
 
   const addQuestion = () => {
-    if (questions.length < 2) {    // ici: changer le nombre maximal de questions
+    if (questions.length < 4) {    // ici: changer le nombre maximal de questions
       let index = Math.floor(Math.random() * potentialQuestions.length);
       let chosenQuestion = potentialQuestions[index];
       setQuestions([chosenQuestion, ...questions]);
